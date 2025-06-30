@@ -70,3 +70,9 @@ START-OF-SELECTION.
   ls_fieldcat-outputlen = '15'.
   APPEND ls_fieldcat TO lt_fieldcat.
   CLEAR ls_fieldcat.
+
+  CALL FUNCTION 'REUSE_ALV_GRID_DISPLAY'
+    EXPORTING
+      it_fieldcat = lt_fieldcat
+    TABLES
+      t_outtab = lt_dados.
